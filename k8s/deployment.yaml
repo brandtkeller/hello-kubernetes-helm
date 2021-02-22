@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-kube
+  name: hello-kube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-kube
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: hello-kube
+    spec:
+      containers:
+      - image: registry.home.local:8443/ironbank/opensource/nginx/nginx:1.19.2
+        name: nginx
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: index
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: index
+        configMap:
+          name: hello-config
