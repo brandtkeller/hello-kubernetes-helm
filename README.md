@@ -26,7 +26,7 @@ The course is broken down into these tiers:
 In the [Instructions](./instructions) directory there are step-by-step guides for working through this tutorial.
     * The files in the directory are in markdown formatting. If working through this tutorial in an IDE such as VSCode:
         * Click in the file contents and hit `ctrl + shift + v` to enter preview for markdown.
-        * This will hide the hints, tips and finished content from deipslaying by default.
+        * This will hide the hints, tips and finished content from displaying by default.
 
 ## Objective
 The objective for this tutorial is to further your understanding of Helm through the conversion of static kubernetes manifests into a packaged helm chart that is extensible and portable.
