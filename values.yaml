@@ -1,2 +1,12 @@
 # Default values for hello-kubernetes.
 # This file is intended to be empty for learning purposes.
+
+author: "Brandt Keller"
+
+image:
+  registry: registry.home.local:8443
+  name: ironbank/opensource/nginx/nginx
+  tag: 1.19.2
+
+service:
+  port: 8080
