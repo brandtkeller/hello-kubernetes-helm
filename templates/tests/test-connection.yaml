@@ -8,8 +8,8 @@ metadata:
     "helm.sh/hook": test
 spec:
   containers:
-    - name: wget
+    - name: content-test
       image: busybox
-      command: ['wget']
-      args: ['{{ include "hello-kubernetes.fullname" . }}:{{ .Values.service.port }}']
-  restartPolicy: Never
+      command: ['/bin/sh', '-c']
+      args: ['wget --spider -S "{{ include "hello-kubernetes.fullname" . }}:{{ .Values.service.port }}" 2>&1 | grep "HTTP/" | awk "{print $2}" | grep 200']
+  restartPolicy: Never 
