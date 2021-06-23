@@ -2,6 +2,7 @@
 # This file is intended to be empty for learning purposes.
 
 author: "Brandt Keller"
+additional_content: "Here is some default additional content"
 
 image:
   registry: registry.home.local:8443

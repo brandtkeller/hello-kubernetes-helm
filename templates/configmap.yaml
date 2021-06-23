@@ -7,3 +7,6 @@ data:
     <h1>Hello Kubernetes Helm Tutorial</h1>
     <h2>Author: " {{ .Values.author }}"</h2>
     <p>If you can see this page, that means the content has been mounted to the pod through this configmap correctly.<p>
+    {{ if .Values.additional_content }}
+    <p> {{.Values.additional_content }} </p>
+    {{- end }}
